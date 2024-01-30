@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "NavigationMultimoduleCompose"
+include ':app'
+include ':core'
+include ':core:feature-api'
+include ':feature-main'
+include ':feature-main:homeapi'
+include ':feature-main:homeimpl'
+include ':feature-main:settingsapi'
+include ':feature-main:settingsimpl'
+include ':core:dependencyprovider'
